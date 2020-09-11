@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-import { Layout } from '../styles/pages/Main'
+import Layout from '@components/Layout'
 
 const Home: React.FC = () => {
   return (
