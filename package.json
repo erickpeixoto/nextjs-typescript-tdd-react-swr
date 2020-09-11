@@ -11,6 +11,7 @@
     "cy:run": "cypress run"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "next": "9.5.2",
     "next-images": "^1.4.1",
     "react": "16.13.1",
@@ -19,7 +20,7 @@
   },
   "devDependencies": {
     "@testing-library/cypress": "^7.0.0",
-    "@types/node": "^14.6.0",
+    "@types/node": "^14.10.0",
     "@types/react": "^16.9.46",
     "@types/styled-components": "^5.1.2",
     "@typescript-eslint/eslint-plugin": "^3.9.1",
