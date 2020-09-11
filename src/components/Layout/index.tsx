@@ -1,10 +1,10 @@
 import React from 'react'
-
-const Layout = props => {
+import { Container } from './styles'
+const Layout: React.FC = props => {
   return (
-    <div className="Layout">
+    <Container>
       <div className="Content">{props.children}</div>
-    </div>
+    </Container>
   )
 }
 
