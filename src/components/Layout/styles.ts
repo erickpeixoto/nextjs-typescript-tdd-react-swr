@@ -1,10 +1,10 @@
 import Styled from 'styled-components'
-import { Button as useButton } from '@lib/Wrapper'
+import { Drawer as useDrawer, AppBar } from '@lib/Wrapper'
 
-export const Button = Styled(useButton)`
-`
-
-export const Container = Styled.div`
+type Props = {
+  sidebar: boolean
+}
+export const Container = Styled.div<Props>`
     display: grid;
     grid-template-areas: 
     'NB NB NB'
@@ -15,16 +15,16 @@ export const Container = Styled.div`
      
     grid-template-rows: 75px calc(100vh - 75px) auto; /* Height */
     grid-template-columns: ${(props: any) =>
-      props.sidebar ? '80px auto auto' : '250px auto auto'};
+      !props.sidebar ? '80px auto auto' : '250px auto auto'};
     transition:  grid-template-columns 600ms ease-in-out;
 `
-export const NavBar = Styled.div`
+export const NavBar = Styled(AppBar)`
   grid-area: NB;
   display: flex;
   background: yellow;
 `
 
-export const SideBar = Styled.div`
+export const SideBar = Styled(useDrawer)`
   grid-area: SB;
   display: flex;
   background: red;

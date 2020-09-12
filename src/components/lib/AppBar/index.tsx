@@ -10,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 
 type Props = {
   open: boolean
+  handleOpen(open: boolean): void
 }
 const drawerWidth = 240
 
@@ -42,7 +43,7 @@ const useStyles = makeStyles(theme => ({
 
 const AppBarModule: React.FC<Props> = (props: Props) => {
   const classes = useStyles()
-  const { open } = props
+  const { open, handleOpen } = props
 
   return (
     <AppBar
@@ -56,7 +57,7 @@ const AppBarModule: React.FC<Props> = (props: Props) => {
         <IconButton
           color="inherit"
           aria-label="open drawer"
-          onClick={() => ({})}
+          onClick={() => handleOpen(!open)}
           edge="start"
           className={clsx(classes.menuButton, {
             [classes.hide]: open

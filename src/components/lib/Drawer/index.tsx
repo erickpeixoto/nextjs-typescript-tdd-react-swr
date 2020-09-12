@@ -13,10 +13,10 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import InboxIcon from '@material-ui/icons/MoveToInbox'
 import MailIcon from '@material-ui/icons/Mail'
-import { AppBar } from '@lib/Wrapper'
 
 type Props = {
   open: boolean
+  handleOpen(open: boolean): void
 }
 
 const drawerWidth = 240
@@ -64,12 +64,10 @@ const useStyles = makeStyles(theme => ({
 const MiniDrawer: React.FC<Props> = (props: Props) => {
   const classes = useStyles()
   const theme = useTheme()
-  const { open } = props
-  console.warn({ theme })
+  const { open, handleOpen } = props
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar open={open} />
       <Drawer
         variant="permanent"
         className={clsx(classes.drawer, {
@@ -84,7 +82,7 @@ const MiniDrawer: React.FC<Props> = (props: Props) => {
         }}
       >
         <div className={classes.toolbar}>
-          <IconButton>
+          <IconButton onClick={() => handleOpen(!open)}>
             {theme.direction === 'rtl' ? (
               <ChevronRightIcon />
             ) : (
