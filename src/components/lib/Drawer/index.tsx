@@ -13,6 +13,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import InboxIcon from '@material-ui/icons/MoveToInbox'
 import MailIcon from '@material-ui/icons/Mail'
+import PermIdentitySharpIcon from '@material-ui/icons/PermIdentitySharp'
+import QueueSharpIcon from '@material-ui/icons/QueueSharp'
 
 type Props = {
   open: boolean
@@ -92,25 +94,27 @@ const MiniDrawer: React.FC<Props> = (props: Props) => {
         </div>
         <Divider />
         <List>
-          {['User List', 'Create'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button>
+            <ListItemIcon>
+              <PermIdentitySharpIcon />
+            </ListItemIcon>
+            <ListItemText primary={'Usuários'} />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <QueueSharpIcon />
+            </ListItemIcon>
+            <ListItemText primary={'Novo'} />
+          </ListItem>
         </List>
         <Divider />
         <List>
-          {['App Requirement'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button>
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText primary={'Contato'} />
+          </ListItem>
         </List>
       </Drawer>
     </div>
