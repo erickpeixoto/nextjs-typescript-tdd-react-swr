@@ -39,8 +39,10 @@ export const SideBar = Styled(useDrawer)`
 export const Content = Styled.div`
   grid-area: CB;
   display: flex;
-  background: #f7f7f7;
   padding: 0px 15px;
+  margin-top: 26px;
+  padding: 8px 0px;
+  
 
 `
 export const Breadcrumb = Styled(useBreadCrumb)`
