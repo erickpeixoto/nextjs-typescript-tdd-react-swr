@@ -2,6 +2,7 @@
   "name": "vnda-app",
   "version": "0.1.0",
   "private": true,
+  "author": "Erick Eduardo <erickepeixoto@gmail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,12 +14,14 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "axios": "^0.20.0",
     "material-table": "^1.69.0",
     "next": "9.5.2",
     "next-images": "^1.4.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "swr": "^0.3.2"
   },
   "devDependencies": {
     "@testing-library/cypress": "^7.0.0",

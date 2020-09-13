@@ -1,16 +1,16 @@
 import React from 'react'
 import Head from 'next/head'
-
-import Layout from '@components/Layout'
+import DefaultPage from './user'
 
 const Main: React.FC = () => {
   return (
-    <Layout>
+    <>
       <Head>
         <title>Create Next App - CRUD</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    </Layout>
+      <DefaultPage />
+    </>
   )
 }
 export default Main

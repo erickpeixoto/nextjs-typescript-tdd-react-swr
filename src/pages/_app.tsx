@@ -4,6 +4,10 @@ import { AppProps } from 'next/app'
 import { ThemeProvider } from '@material-ui/core'
 import GlobalStyles from '@style/global'
 import { createMuiTheme } from '@material-ui/core/styles'
+import axios from 'axios'
+import { SWRConfig } from 'swr'
+import Layout from '@components/Layout'
+axios.defaults.baseURL = 'https://demo.vnda.com.br/api/v2'
 
 const theme = createMuiTheme({
   palette: {
@@ -22,7 +26,13 @@ const theme = createMuiTheme({
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <SWRConfig
+        value={{ fetcher: (url: string) => axios(url).then(r => r.data) }}
+      >
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </SWRConfig>
       <GlobalStyles />
     </ThemeProvider>
   )
