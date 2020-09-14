@@ -131,7 +131,7 @@ yarn dev
 > ## Cenários de Testes de Integração e2e
 
   <h1 align="center">
-    <img src="src/style/assets/user.gif" width="100%" height="100%" max-width:100% >
+    <img src="user.gif" width="100%" height="100%" max-width:100% >
     </br>
   </h1>
 
