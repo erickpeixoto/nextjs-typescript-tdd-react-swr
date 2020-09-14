@@ -23,11 +23,28 @@ const ListUi: React.FC<TableState> = (props): React.ReactElement => {
             cancelTooltip: 'Cancelar',
             saveTooltip: 'Salvar'
           },
-          addTooltip: 'Novo Usuário'
+          addTooltip: 'Novo Usuário',
+          emptyDataSourceMessage: 'Não há registros para serem listados :/'
         },
         toolbar: {
           searchPlaceholder: 'Pesquisar...',
-          searchTooltip: 'Pesquisar...'
+          searchTooltip: 'Pesquisar...',
+          exportPDFName: 'Exportar PDF',
+          exportCSVName: 'Exportar CSV',
+          exportAriaLabel: 'Exportar',
+          exportTitle: 'Exportar'
+        },
+        pagination: {
+          labelDisplayedRows: '{from}-{to} de {count}',
+          labelRowsSelect: 'Linhas',
+          firstTooltip: 'Primeira',
+          firstAriaLabel: 'Primeira',
+          lastAriaLabel: 'Última',
+          lastTooltip: 'Última',
+          nextAriaLabel: 'Próxima',
+          nextTooltip: 'Próxima',
+          previousAriaLabel: 'Anterior',
+          previousTooltip: 'Anterior'
         }
       }}
       options={{
