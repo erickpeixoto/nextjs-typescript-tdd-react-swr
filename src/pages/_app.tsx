@@ -7,7 +7,7 @@ import { createMuiTheme } from '@material-ui/core/styles'
 import axios from 'axios'
 import { SWRConfig } from 'swr'
 import Layout from '@components/Layout'
-axios.defaults.baseURL = 'https://demo.vnda.com.br/api/v2'
+axios.defaults.baseURL = process.env.API_HOST_DEV
 
 const theme = createMuiTheme({
   palette: {

@@ -6,6 +6,7 @@ declare global {
     interface ProcessEnv {
       AUTH_TOKEN: string
       API_HOST: string
+      API_HOST_DEV: string
       NODE_ENV: 'development' | 'production'
       PORT?: string
     }

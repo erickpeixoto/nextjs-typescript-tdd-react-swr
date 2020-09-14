@@ -20,6 +20,7 @@
     "next-images": "^1.4.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-select-material-ui": "^6.7.0",
     "styled-components": "^5.1.1",
     "swr": "^0.3.2"
   },

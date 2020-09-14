@@ -5,11 +5,12 @@ const { API_HOST, AUTH_TOKEN } = process.env
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
+    const { body } = req
     const data = await axios
-      .get(`${API_HOST}/users`, getAuth())
+      .post(`${API_HOST}/users`, body, getAuth())
       .then(resp => resp.data)
 
-    console.error(data)
+    console.error(body)
     res.status(200).json({ data })
   } catch (error) {
     throw new Error(error)
