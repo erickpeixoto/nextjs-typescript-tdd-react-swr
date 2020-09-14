@@ -35,6 +35,7 @@
     "react/prop-types": "off",
     "camelcase": "off",
     "react/display-name": "off",
-    "cypress/no-unnecessary-waiting": "off"
+    "cypress/no-unnecessary-waiting": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }
