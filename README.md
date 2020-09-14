@@ -1,30 +1,138 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+> ## Projeto
+ - Projeto CRUD em NextJs
 
-## Getting Started
+> ## Desenvolimento tecnológico 
 
-First, run the development server:
+  - [Erick Eduardo](https://github.com/erickpeixoto);
+  
 
+> ## Funcionalidade 
+
+- CRUD de usuários 
+- Front-end 
+- Back-end
+
+### :heavy_check_mark: Configurações necessárias
+
+
+> ## Configurações
+
+-  [Git](https://git-scm.com);
+-  [Node](https://nodejs.org/);
+-  [Yarn](https://yarnpkg.com/).
+
+### :arrow_down_small: Clonando o repositório
+1. Pelo terminal, acesse o diretório em que deseja ter o repositório clonado e execute o comando a seguir:
 ```bash
-npm run dev
-# or
+# clonando o repositório
+git clone https://github.com/erickpeixoto/nextjs-typescript-tdd-react-swr
+```
+
+### :beginner: Iniciando a aplicação
+1. Pelo terminal, acesse o diretório do repositório do clonado e execute os comandos abaixo.
+```bash
+# instalando as dependências
+yarn 
+
+# iniciando a aplicação
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> ## Metodologias 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+* TDD
+* Responsive Layout
+* Conventional Commits
+* GitFlow
 
-## Learn More
+> ## Bibliotecas e Ferramentas
 
-To learn more about Next.js, take a look at the following resources:
+* Typescript
+* React
+* React Testing Library
+* React Router DOM
+* Cypress
+* Jest
+* Axios
+* Git
+* Webpack
+* SASS + Animations
+* NPM
+* Faker
+* Husky
+* Lint Staged
+* Eslint
+* Standard Javascript Style
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> ## Features do React
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+* Functional Components
+* UseState
+* UseContext
+* UseEffect
+* UseHistory
+* UseRef
+* UseParams
+* Custom Hooks
+* Memo
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> ## Features do NextJs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* MonoRepo 
+* TypeScript
+* SWR - Data Fetching
+* Overrides App and Document
+* Styled Components - Theme Provider
+* Material Design UI - Themes Provider
+* Back-end em TypeScrips
+* Dotenv
+
+> ## Features do Git
+
+* Alias
+* Log Personalizado
+* Branch
+* Reset
+* Amend
+* Tag
+* Tag Anotada
+* Stash
+* Rebase
+* Merge
+* Add
+* Commit
+* Push
+* Pull
+* Shortlog
+* Status
+
+
+> ## Features do Typescript
+
+* POO Avançado
+* Interface
+* Type Alias
+* Namespace
+* Module
+* Utility Types
+* Modularização de Paths
+* Build
+* Deploy
+* Generics
+
+> ## Features de Testes
+
+* Testes de Integração
+* Testes e2e
+* Cobertura de Testes
+* Fakes
+
+> ## Cenários de Testes de Integração e2e
+
+  <h1 align="center">
+    <img src="user.gif" width="100%" height="100%" max-width:100% >
+    </br>
+  </h1>
+
+Erick Eduardo :blue_heart: Contato: https://www.linkedin.com/in/erickepeixoto :blush:

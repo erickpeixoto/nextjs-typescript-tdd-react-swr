@@ -12,7 +12,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     res.status(200).json({ data })
   } catch (error) {
-    throw new Error(error)
+    res.status(422).json({
+      error,
+      message: 'Os parâmetros enviados são inválidos'
+    })
   }
 }
 const getAuth = () => ({

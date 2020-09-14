@@ -15,15 +15,20 @@ const User = _props => {
   const [tags, setTags] = useState<string[]>([])
 
   const onPost = async (item: any) => {
-    const url = 'api/users'
-    mutate(
-      url,
-      data.filter(c => c.id !== item.id),
-      false
-    )
-    await axios.post('api/users/post', item)
-    trigger(url)
-    addToast('Cadastrado com Sucesso!', { appearance: 'success' })
+    try {
+      mutate(
+        'api/users',
+        data.filter(c => c.id !== item.id),
+        false
+      )
+      const response = await axios.post('api/users/post', item)
+      trigger('api/users')
+      addToast('Cadastrado com Sucesso!', { appearance: 'success' })
+    } catch (error) {
+      console.log(error)
+      trigger('api/users')
+      addToast('Erro ao efetuar cadastro', { appearance: 'warning' })
+    }
   }
 
   const onUpdate = async (item, old) => {
