@@ -4,6 +4,7 @@ import { AppProps } from 'next/app'
 import { ThemeProvider } from '@material-ui/core'
 import GlobalStyles from '@style/global'
 import { createMuiTheme } from '@material-ui/core/styles'
+import { ToastProvider } from 'react-toast-notifications'
 import axios from 'axios'
 import { SWRConfig } from 'swr'
 import Layout from '@components/Layout'
@@ -30,7 +31,9 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         value={{ fetcher: (url: string) => axios(url).then(r => r.data) }}
       >
         <Layout>
-          <Component {...pageProps} />
+          <ToastProvider style={{ zIndex: 9999999 }}>
+            <Component {...pageProps} />
+          </ToastProvider>
         </Layout>
       </SWRConfig>
       <GlobalStyles />

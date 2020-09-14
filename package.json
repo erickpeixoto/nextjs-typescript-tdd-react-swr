@@ -21,6 +21,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-select-material-ui": "^6.7.0",
+    "react-toast-notifications": "^2.4.0",
     "styled-components": "^5.1.1",
     "swr": "^0.3.2"
   },

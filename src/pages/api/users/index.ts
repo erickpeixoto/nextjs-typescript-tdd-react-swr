@@ -10,12 +10,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       .then(resp => resp.data)
 
     res.status(200).json({
-      data: data.map(({ name, email, external_code, role, tags }) => ({
+      data: data.map(({ name, email, external_code, role, tags, id }) => ({
         name,
         email,
         role,
         external_code,
-        tags
+        tags,
+        id
       }))
     })
   } catch (error) {

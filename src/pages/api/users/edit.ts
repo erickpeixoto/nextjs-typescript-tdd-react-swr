@@ -5,12 +5,14 @@ const { API_HOST, AUTH_TOKEN } = process.env
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const data = await axios
-      .put(`${API_HOST}/users`, getAuth())
-      .then(resp => resp.data)
+    if (req.method === 'PUT') {
+      const { id } = req.body
+      await axios
+        .put(`${API_HOST}/users/${id}`, req.body, getAuth())
+        .then(resp => resp.data)
 
-    console.error(data)
-    res.status(200).json({ data })
+      res.status(200).json({ id, message: 'Registro Excluído com Sucesso!' })
+    }
   } catch (error) {
     throw new Error(error)
   }

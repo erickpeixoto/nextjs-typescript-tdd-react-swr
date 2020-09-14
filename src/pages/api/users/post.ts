@@ -10,7 +10,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       .post(`${API_HOST}/users`, body, getAuth())
       .then(resp => resp.data)
 
-    console.error(body)
     res.status(200).json({ data })
   } catch (error) {
     throw new Error(error)

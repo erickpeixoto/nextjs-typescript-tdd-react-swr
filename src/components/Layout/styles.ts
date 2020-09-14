@@ -24,6 +24,10 @@ export const Container = Styled.div<Props>`
          margin-top: 73px !important;
          z-index: 1 !important;
      }
+     header{
+        z-index: 999;
+        color: white;
+     }
 `
 export const NavBar = Styled(AppBar)`
   grid-area: NB;

@@ -4,6 +4,7 @@ import Breadcrumbs from '@material-ui/core/Breadcrumbs'
 import Chip from '@material-ui/core/Chip'
 import HomeIcon from '@material-ui/icons/Home'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import Link from 'next/link'
 
 const StyledBreadcrumb = withStyles((theme: Theme) => ({
   root: {
@@ -21,33 +22,23 @@ const StyledBreadcrumb = withStyles((theme: Theme) => ({
   }
 }))(Chip) as typeof Chip
 
-function handleClick(event: React.MouseEvent<Element, MouseEvent>) {
-  event.preventDefault()
-  console.info('You clicked a breadcrumb.')
-}
-
 const BreadC: React.FC = () => {
   return (
     <Breadcrumbs aria-label="breadcrumb">
-      <StyledBreadcrumb
-        component="a"
-        href="#"
-        label="Início"
-        icon={<HomeIcon fontSize="small" />}
-        onClick={handleClick}
-      />
-      <StyledBreadcrumb
-        component="a"
-        href="#"
-        label="Usuários"
-        onClick={handleClick}
-      />
-      <StyledBreadcrumb
-        label="Listagem"
-        deleteIcon={<ExpandMoreIcon />}
-        onClick={handleClick}
-        onDelete={handleClick}
-      />
+      <Link href="/" as="/app">
+        <StyledBreadcrumb
+          component="a"
+          href="#"
+          label="Início"
+          icon={<HomeIcon fontSize="small" />}
+        />
+      </Link>
+      <Link href="/user">
+        <StyledBreadcrumb component="a" href="#" label="Usuários" />
+      </Link>
+      <Link href="/user">
+        <StyledBreadcrumb label="Listagem" deleteIcon={<ExpandMoreIcon />} />
+      </Link>
     </Breadcrumbs>
   )
 }

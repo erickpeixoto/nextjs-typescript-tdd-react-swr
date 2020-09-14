@@ -33,6 +33,8 @@
     "prettier/prettier": "error",
     "space-before-function-paren": "off",
     "react/prop-types": "off",
-    "camelcase": "off"
+    "camelcase": "off",
+    "react/display-name": "off",
+    "cypress/no-unnecessary-waiting": "off"
   }
 }
