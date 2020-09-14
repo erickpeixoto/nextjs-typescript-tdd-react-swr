@@ -5,3 +5,4 @@ import { TableState } from './types'
 export const List = Styled(useList)<TableState>`
 
 `
+export default List

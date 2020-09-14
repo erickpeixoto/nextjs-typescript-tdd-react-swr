@@ -10,4 +10,7 @@ interface Row {
 interface TableState {
   columns: Array<Column<Row>>
   data: Row[]
+  onPost: any
+  onDelete: any
+  onUpdate: any
 }

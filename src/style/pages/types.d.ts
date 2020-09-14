@@ -8,6 +8,6 @@ interface Row {
 }
 
 interface TableState {
-  columns: Array<Column<Row>>
-  data: Row[]
+  columns?: Array<Column<Row>>
+  data?: Row[]
 }
