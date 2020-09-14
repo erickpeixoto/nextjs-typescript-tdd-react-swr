@@ -55,6 +55,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
           />
+          <script src="faker.js" type="text/javascript"></script>
         </Head>
         <body>
           <Main />
